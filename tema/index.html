@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista cumparaturi</title>
+    <link rel="stylesheet" href="css/style.css" media="screen" title="no title" charset="utf-8">
+    <!-- <link rel="stylesheet" href="fonts/stylesheet.css" media="screen" title="no title" charset="utf-8"> -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
+    <!-- <link rel="stylesheet" href="css/font-awesome.min.css"> -->
+
+  </head>
+  <body>
+    <div class="container">
+      <div class="overlay">
+        <div class="modalEdit">
+          <form class="newItemName" action="index.html" method="post">
+            <label id="editItem" for="changeItem">Editaţi itemu-ul</label>
+            <input type="text" id="changeItem">
+            <div class="modalEditButtonsArea">
+              <button type="button" class= "modalEditButtons"id="Cancel">Cancel</button>
+              <button type="button" class= "modalEditButtons" id="Save">Save</button>
+            </div>
+          </form>
+        </div>
+      </div>
+      <h3>Lista de cumparaturi</h3>
+      <div class="info-tab">
+        <div class="infos">
+          <p>Numar items: <span id="item-number">0</span></p>
+          <p>Modificat la: <span id="date">d</span></p>
+        </div>
+        <button id="clear" type="submit" class="mybutton" name="clear-button">
+          <span id="clearAll">Clear All</span>
+        </button>
+      </div>
+      <ul id="items">
+        <li class="sample">
+          <form class="newItem" action="index.html" method="post">
+            <input type="checkbox"  name="" value="" class="itemName">
+            <label class="item" for="itemName">item</label>
+            <div class="itemButtonArea">
+              <svg version="1.1" id="editButton" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+              	 viewBox="-402 280.28 36 36" style="enable-background:new -402 280.28 36 36;" xml:space="preserve">
+                <path d="M-393.367,313.226l2.161-2.161l-5.579-5.579l-2.161,2.161v2.541h3.039v3.039L-393.367,313.226L-393.367,313.226z
+              	 M-380.95,291.193c0-0.348-0.175-0.523-0.523-0.523c-0.159,0-0.293,0.056-0.404,0.167l-12.869,12.869
+              	c-0.111,0.111-0.167,0.245-0.167,0.404c0,0.348,0.175,0.523,0.523,0.523c0.159,0,0.293-0.056,0.404-0.167l12.869-12.869
+              	C-381.006,291.486-380.95,291.351-380.95,291.193z M-382.232,286.634l9.877,9.877l-19.753,19.754h-9.877v-9.877L-382.232,286.634z
+              	 M-366.015,288.914c0,0.838-0.293,1.55-0.879,2.137l-3.941,3.941l-9.877-9.877l3.941-3.917c0.57-0.602,1.282-0.903,2.137-0.903
+              	c0.838,0,1.558,0.301,2.161,0.903l5.579,5.556c0.586,0.617,0.879,1.337,0.879,2.161l0,0V288.914z"/>
+              </svg>
+              <svg version="1.1" id="closeButton" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+              	 viewBox="-402 280.28 36 36" style="enable-background:new -402 280.28 36 36;" xml:space="preserve">
+                <path d="M-366.059,309.213c0,0.805-0.282,1.489-0.846,2.053l-4.109,4.109c-0.564,0.564-1.248,0.846-2.053,0.846
+                	c-0.805,0-1.489-0.282-2.053-0.846l-8.88-8.88l-8.88,8.88c-0.564,0.564-1.248,0.846-2.053,0.846c-0.805,0-1.489-0.282-2.053-0.846
+                	l-4.109-4.109c-0.564-0.564-0.846-1.248-0.846-2.053c0-0.805,0.282-1.489,0.846-2.053l8.88-8.88l-8.88-8.88
+                	c-0.564-0.564-0.846-1.248-0.846-2.053c0-0.805,0.282-1.489,0.846-2.053l4.109-4.109c0.564-0.564,1.248-0.846,2.053-0.846
+                	c0.805,0,1.489,0.282,2.053,0.846l8.88,8.88l8.88-8.88c0.564-0.564,1.248-0.846,2.053-0.846c0.805,0,1.489,0.282,2.053,0.846
+                	l4.109,4.109c0.564,0.564,0.846,1.248,0.846,2.053c0,0.805-0.282,1.489-0.846,2.053l-8.88,8.88l8.88,8.88
+                	C-366.341,307.724-366.059,308.409-366.059,309.213z"/>
+              </svg>
+            </div>
+          </form>
+        </li>
+      </ul>
+      <div class="addTab">
+        <label for="addInput">Adauga un item nou</label>
+        <form id="addItemArea" action="index.html" method="post">
+          <input type="text" id="addInput" placeholder="Denumire produs">
+          <button type="submit" class="mybutton" name="add-item">
+            <svg version="1.1"  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="-402 280.28 36 36" style="enable-background:new -402 280.28 36 36;" xml:space="preserve">
+              <path id="addIcon" d="M-366.81,294.108c0.479,0.479,0.719,1.054,0.719,1.726v4.892c0,0.672-0.239,1.247-0.719,1.726
+              	c-0.479,0.479-1.054,0.719-1.726,0.719h-10.573v10.573c0,0.672-0.239,1.247-0.719,1.726c-0.479,0.479-1.054,0.719-1.726,0.719
+              	h-4.892c-0.672,0-1.247-0.239-1.726-0.719c-0.479-0.479-0.719-1.054-0.719-1.726v-10.573h-10.573c-0.672,0-1.247-0.239-1.726-0.719
+              	c-0.479-0.479-0.719-1.054-0.719-1.726v-4.892c0-0.672,0.239-1.247,0.719-1.726c0.479-0.479,1.054-0.719,1.726-0.719h10.573v-10.573
+              	c0-0.672,0.239-1.247,0.719-1.726c0.479-0.479,1.054-0.719,1.726-0.719h4.892c0.672,0,1.247,0.239,1.726,0.719
+              	c0.479,0.479,0.719,1.054,0.719,1.726v10.573h10.573C-367.864,293.389-367.289,293.629-366.81,294.108z"/>
+            </svg>
+          </button>
+        </form>
+      </div>
+    </div>
+    <script type="text/javascript" src="js/jquery-3.1.0.min.js"></script>
+    <script type="text/javascript" src="js/script.js"></script>
+  </body>
+</html>
